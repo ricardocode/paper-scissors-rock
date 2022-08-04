@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Piedra Papel y Tijera!</title>
+
+        <script>
+            function randomito (min, max) {
+                return Math.floor(Math.random()*(max - min + 1) + min)
+            }
+            // 1 es piedra | 2 es papel | 3 es tijera
+            let playero = 0
+            let machina = randomito(1,3)
+
+            playero = prompt("Elige 1 para piedra, 2 para papel y 3 para tijera")
+//Opciones que elige el Jugador
+            if (playero == 1) {
+                alert("Elegiste Piedra");
+            } else if (playero == 2){
+                alert("Elegiste Papel");
+            } else if (playero == 3){
+                alert("Elegiste Tijera");
+            } else {
+                alert("You Lose T_T");
+            }
+//Opciones que elige la Máquina
+            if (machina == 1) {
+                alert("Machina elige Piedra");
+            } else if (machina == 2){
+                alert("Machina elige Papel");
+            } else if (machina == 3){
+                alert("Machina elige Tijera");
+            } else {
+            }
+//Dinámica de combate 
+            // Lets combat!
+            if(machina == playero) {
+                alert("Empate!");
+            } else if (playero == 1 && machina == 3){
+                alert("Tu Ganas xD");
+            } else if (playero == 2 && machina == 1){
+                alert("Tu Ganas xD");
+            } else if (playero == 3 && machina == 2){
+                alert("Tu Ganas xD");
+            } else {
+                alert("You Lose T_T");
+            }
+
+            
+        </script>
+    </head>
+    <body>
+        <h1>Piedra Papel y Tijera!</h1>
+        
+    </body>
+</html>
